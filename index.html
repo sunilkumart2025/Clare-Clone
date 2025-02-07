@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clare Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background: #002f45;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .top-bar a {
+            color: #f5c518;
+            text-decoration: none;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px 0;
+            min-width: 150px;
+        }
+        .dropdown-menu li {
+            padding: 10px;
+        }
+        .dropdown-menu a {
+            color: black;
+            text-decoration: none;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .icons span {
+            margin-left: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdowns = document.querySelectorAll(".dropdown");
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener("mouseenter", () => {
+                    dropdown.querySelector(".dropdown-menu").style.display = "block";
+                });
+                dropdown.addEventListener("mouseleave", () => {
+                    dropdown.querySelector(".dropdown-menu").style.display = "none";
+                });
+            });
+        });
+    </script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footer Clone</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .footer {
+        background-color: #002F42;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: 100px;
+    }
+    .footer h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .footer p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .email-signup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .email-signup input {
+        width: 300px;
+        padding: 10px;
+        border-radius: 25px 0 0 25px;
+        border: none;
+        outline: none;
+    }
+    .email-signup button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #5CBFD8;
+        color: white;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+    }
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto 30px auto;
+        text-align: left;
+    }
+    .footer-links div {
+        margin: 10px 30px;
+    }
+    .footer-links h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+        
+    .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+    }
+
+    .search-icon {
+        color: black; /* Light blue */
+    }
+
+    
+    .footer-links a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .social-icons {
+        margin-bottom: 20px;
+    }
+    .social-icons a {
+        color: white;
+        font-size: 20px;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    .footer-bottom {
+        font-size: 12px;
+    }
+</style>
+
+
+<style>@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+    .bottom-container{
+        background-color:white;
+        padding-top:50px;
+    }
+    
+    .heading{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        font-weight:bold ;
+        padding: 30px;
+    }
+    
+    .paragraph{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        padding: 30px;
+    }
+    
+    .clare-button{
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 50px;
+        margin-left: 150px;
+        align-items: center;
+    }
+    
+    .image{
+        height:70vh;
+        margin-top: 20px;
+        margin-right: 0;
+        padding-right: 0;
+        align-items: end;
+
+    
+
+        
+    }
+    
+    .search-icon:hover {
+        cursor: pointer;
+    color: #8acbcc; /* Light blue */
+}
+    
+    
+    
+    </style>
+
+
+
+
+
+</head>
+<body>
+    <div class="top-bar">
+        Free shipping on 5+ swatches and orders over $150! <a href="#">SHOP NOW</a>
+    </div>
+    <nav class="navbar">
+        <div class="logo">CLARE</div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Interior Paint</a></li>
+                    <li><a href="#">Exterior Paint</a></li>
+                    <li><a href="#">Supplies</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Learn <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Our Products</a></li>
+                    <li><a href="#">Supplies</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Get Inspired <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Take the Quiz</a>
+                
+            </li>
+            
+        </ul>
+        <div class="icon-container">
+            <i class="fas fa-search search-icon"></i>
+            <i class="far fa-heart"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <div class="container d-flex flex-row justify-content-center">
+    <div class="bottom-container mt-10">
+        <h1 class="heading">
+            Make this year your brightest yet
+        </h1>
+        <p class="paragraph">
+            Ring in 2025 with a fresh new look for your home
+        </p>
+        <button class="clare-button btn btn-warning">
+            Shop all paint
+        </button>
+    </div>
+    
+    <div class="image">
+        <img class="image" src="C:\Users\Karthikeyan\Desktop\sun\hedder\WhatsApp Image 2025-02-07 at 2.39.00 PM.jpeg">
+    </div>
+</div>
+
+
+
+
+    <footer class="footer">
+        <h2>Brighten up your inbox, get 10% off</h2>
+        <p>Get decor inspiration and color advice delivered weekly—plus save on your first paint purchase when you sign up!</p>
+        <div class="email-signup">
+            <input type="email" placeholder="Enter your email">
+            <button>&rarr;</button>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>SHOP</h4>
+                <a href="#">Interior Paint</a>
+                <a href="#">Ceiling Paint</a>
+                <a href="#">Paint Primer</a>
+                <a href="#">Paint Supplies</a>
+            </div>
+            <div>
+                <h4>EXPLORE</h4>
+                <a href="#">Reviews</a>
+                <a href="#">Get $10</a>
+                <a href="#">Clare Color Genius</a>
+                <a href="#">Paint Calculator</a>
+                <a href="#">Blog</a>
+                <a href="#">Newsletter & SMS</a>
+            </div>
+            <div>
+                <h4>ACCOUNT</h4>
+                <a href="#">Manage Account</a>
+                <a href="#">My Favorite Colors</a>
+            </div>
+            <div>
+                <h4>SUPPORT</h4>
+                <a href="#">FAQs</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Safety Information</a>
+                <a href="#">Returns</a>
+            </div>
+            <div>
+                <h4>COMPANY</h4>
+                <a href="#">Our Story</a>
+                <a href="#">Our Products</a>
+                <a href="#">Design Trade</a>
+                <a href="#">Affiliates</a>
+                <a href="#">Press</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Clare Paint LLC | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">Warranty</a>
+        </div>
+    </footer>
+</body>
+</html>
